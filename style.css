@@ -13,16 +13,16 @@
     text-decoration: none;
 }
 :root {
-    --bg-color: #1c1c1c; /* Noir charbon pour le fond principal */
-    --text-color: #e0e0e0; /* Texte principal : gris clair */
-    --text-secondary-color: #a0a0a0; /* Texte secondaire : gris doux */
-    --accent-color-1: #3498db; /* Accent principal : bleu pétrole */
-    --accent-color-2: #2ecc71; /* Accent secondaire : vert émeraude */
-    --alert-color: #c0392b; /* Rouge bordeaux pour les alertes ou erreurs */
-    --highlight-color: #e67e22; /* Surbrillance ou alerte : orange brûlé */
-    --border-color: #2f2f2f; /* Bordure : gris très foncé */
-    --button-bg: #2f2f2f; /* Fond des boutons : gris très foncé */
-    --button-text-color: #e0e0e0; /* Texte des boutons : gris clair */
+    --bg-color: #1c1c1c; 
+    --text-color: #e0e0e0;
+    --text-secondary-color: #a0a0a0;
+    --accent-color-1: #3498db; 
+    --accent-color-2: #2ecc71;
+    --alert-color: #c0392b; 
+    --highlight-color: #e67e22;
+    --border-color: #2f2f2f; 
+    --button-bg: #2f2f2f;
+    --button-text-color: #e0e0e0;
     --button-bg-2:#c2f22d;
 }
 
@@ -45,8 +45,21 @@ section{
     border-radius: 5px;
     font-size: 1.1rem;
     font-weight: 500;
+    transition: color .32s ease-in-out;
 }
-
+.heading-text{
+    text-align: center;
+    margin:3rem 0 ;
+}
+.heading-text span{
+    color: var(--button-bg-2);
+    font-size: 1.2rem;
+}
+.heading-text p{
+    font-size: clamp(30px,3rem,60px);
+    font-weight: 700;
+    padding-top: 10px;
+}
 /* ####################### */
 /* header */
 /* ####################### */
@@ -173,4 +186,53 @@ nav{
 .form-items label{
     font-size: 1rem;
     color: #0f0e0e;
+}
+/* ###################### */
+/* location */
+/* ###################### */
+.location-item{
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,auto));
+    gap: 25px;
+    margin-top:5rem;
+}
+.location .offre{
+    text-align: center;
+    padding: .8rem;
+    position: relative;
+    background-color:var(--bg-color) ;
+}
+.location .offre h3{
+    padding-bottom: .5rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.location .offre p{
+    line-height: 1.8rem;
+}
+.offre::after, .offre::before{
+    content: "";
+    height: 50px;
+    width: 50px;
+    background-color: #e0e0e0;
+    position: absolute;
+    display: block;
+    z-index: -1;
+    transition: width .2s ease-in-out, width .2s ease-in-out;
+}
+.offre::after{
+    top: -0.2rem;
+    left: -0.2rem;
+}
+.offre::before{
+    bottom: -0.2rem;
+    right: -0.2rem;
+}
+.offre:hover{
+    background-color: #696969;
+    color: #070707;
+}
+.offre:hover::after, .offre:hover::before{
+    width: 100%;
+    height: 100%;
 }
