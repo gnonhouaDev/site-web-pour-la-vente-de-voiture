@@ -294,3 +294,44 @@ nav{
 /* #################### */
 /* Vos avis */
 /* #################### */
+
+.avis-item-groupe{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+    gap: 4rem;
+    justify-content: center;
+
+}
+.avis-item{
+    text-align: center;
+    padding: 1.2rem 1rem;
+    background-color: rgba(7, 7, 7, 0.5);
+    box-shadow: 0 3px 10px rgba(225, 225, 225, 0.3);
+}
+.avis-text h3{
+    font-size: 1.2rem;
+    padding-bottom: .8rem;
+}
+.avis-text p{
+    line-height: 1.8rem;
+    padding-bottom: .8rem;
+}
+.avis-img{
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin:25px auto;
+
+}
+.avis-img img{
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+
+.icon{
+    color: #c2f22d;
+    font-size: 5rem;
+}
