@@ -40,7 +40,7 @@ section{
 .btn{
     background: var(--button-bg-2);
     color:#0f0e0e;
-    padding: 0.7rem;
+    padding: 0.6rem;
     text-align: center;
     border-radius: 5px;
     font-size: 1.1rem;
@@ -253,7 +253,7 @@ nav{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding:10px ;
+    padding-top:10px ;
     position: relative;
 }
 .voiture-box img{
@@ -304,9 +304,11 @@ nav{
 }
 .avis-item{
     text-align: center;
-    padding: 1.2rem 1rem;
+    padding: 2rem 1.8rem;
     background-color: rgba(7, 7, 7, 0.5);
-    box-shadow: 0 3px 10px rgba(225, 225, 225, 0.3);
+    /* box-shadow: 0 3px 10px rgba(225, 225, 225, 0.3); */
+    border-bottom: 1px solid var(--highlight-color);
+
 }
 .avis-text h3{
     font-size: 1.2rem;
@@ -331,7 +333,67 @@ nav{
 }
 
 
-.icon{
+i{
     color: #c2f22d;
-    font-size: 5rem;
+
+}
+/* ################### */
+/* contact */
+/* ################### */
+
+.contact{
+    background: linear-gradient(135deg, #1b1b1b, #434343, #232526);
+    position: relative;
+    padding:15vh 0 ;
+}
+.contact-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+.contact-center h2{
+    padding-bottom: 20px;
+}
+.contact-center form{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 7px;
+}
+.contact-center form input{
+    width: clamp(40vh,60vh,70vh);
+    
+}
+.btn-contact:hover{
+    background-color: #070707;
+    color: var(--text-color);
+}
+/* ################### */
+/* footer */
+/* ################### */
+.footer{
+    background-color: rgba(7, 7, 7, 0.5);
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,auto));
+    padding: 60px 5%;
+}
+footer h3{
+    padding-bottom: 20px;
+}
+footer li{
+    line-height: 2rem;
+}
+footer li a:hover{
+    color: #c2f22d;
+}
+.footer-paiement img{
+    height: 50px;
+    width: 50px;
+}
+footer p{
+    background-color: #2f2f2f;
+    padding: 18px;
+    font-size: 1.1rem;
+    text-align: center;
 }
