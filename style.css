@@ -8,7 +8,6 @@
     list-style: none;
     border: none;
     outline: none;
-    font-family: "Poppins",sans-serif;
     scroll-behavior: smooth;
     text-decoration: none;
 }
@@ -27,6 +26,7 @@
 }
 
 body{
+    font-family: "Poppins",sans-serif;
     background: var(--bg-color);
     color: var(--text-color);
 }
@@ -56,7 +56,7 @@ section{
     font-size: 1.2rem;
 }
 .heading-text p{
-    font-size: clamp(30px,3rem,60px);
+    font-size: 60px;
     font-weight: 700;
     padding-top: 10px;
 }
@@ -91,6 +91,14 @@ nav{
 }
 .header-nav .bx{
     display: none;
+    font-size: 2.1rem;
+    color: #fff;
+    cursor: pointer;
+}
+.header-nav .bx:hover{
+    background-color: #2f2f2f;
+    border-radius: 100%;
+    padding: .4rem;
 }
 .logo-lettre{
     color: #c2f22d;
@@ -136,7 +144,7 @@ nav{
     color: #c2f22d;
 }
 .home h1{
-    font-size: clamp(30px,50vw,60px);
+    font-size: clamp(20px,50vw,60px);
     line-height:5rem;
 }
 .home p{
@@ -158,13 +166,15 @@ nav{
     flex-wrap: wrap;
     gap: 20px;
     align-items: center;
-    padding: 1.5rem;
+    /* padding: 1.5rem; */
+    padding: 1rem;
     background-color:#fff;
     position: absolute;
     border-radius: 7px;
 
 }
 .form-items{
+    flex:1 1 7rem ;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -195,6 +205,11 @@ nav{
     grid-template-columns:repeat(auto-fit,minmax(240px,auto));
     gap: 25px;
     margin-top:5rem;
+}
+.location-item i{
+    color: #fff;
+    font-size: 2rem;
+    
 }
 .location .offre{
     text-align: center;
@@ -298,8 +313,8 @@ nav{
 .avis-item-groupe{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,auto));
-    gap: 4rem;
-    justify-content: center;
+    gap: 1rem;
+    
 
 }
 .avis-item{
@@ -332,11 +347,6 @@ nav{
     
 }
 
-
-i{
-    color: #c2f22d;
-
-}
 /* ################### */
 /* contact */
 /* ################### */
@@ -345,6 +355,8 @@ i{
     background: linear-gradient(135deg, #1b1b1b, #434343, #232526);
     position: relative;
     padding:15vh 0 ;
+    text-align: center;
+
 }
 .contact-center{
     position: absolute;
@@ -358,17 +370,25 @@ i{
 }
 .contact-center form{
     background-color: #fff;
-    padding: 10px;
+    padding: 8px;
     border-radius: 7px;
 }
 .contact-center form input{
-    width: clamp(40vh,60vh,70vh);
+    width:300px;
     
 }
 .btn-contact:hover{
     background-color: #070707;
     color: var(--text-color);
 }
+
+i{
+
+    color: #e67e22;
+    font-size: 1.1rem;
+    
+}
+
 /* ################### */
 /* footer */
 /* ################### */
@@ -377,6 +397,15 @@ i{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(240px,auto));
     padding: 60px 5%;
+}
+.footer i{
+    color: #fff;
+    font-size: 2rem;
+
+}
+.footer-logo ul{
+    display: flex;
+    gap: 20px;
 }
 footer h3{
     padding-bottom: 20px;
@@ -396,4 +425,79 @@ footer p{
     padding: 18px;
     font-size: 1.1rem;
     text-align: center;
+}
+/* ################### */
+/* Resposible */
+/* ################### */
+
+
+@media screen and (max-width:768px) {
+    .nav-ul{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        flex-direction: column;
+        row-gap: 2rem;
+        width: 280px;
+        min-height: 100vh;
+        background: #fff;
+        box-sizing: 5px 0 5px;
+        box-shadow:5px 0 5px rgba(0,0,0,0.2);
+        padding: 1rem 0;
+        transition: .2s ease-in-out;
+    }
+    .nav-ul a{
+        color: #000;
+    }
+    .header-nav .bx{
+        display: block;
+    }
+    .home-form form{
+        position: relative;
+    }
+    .home-text h1{
+        padding-top: 18vh;
+        font-size: 35px;
+        line-height: 3.2rem;
+    }
+    .home-text p{
+        font-size: 1.1rem;
+    }
+    .home-img img{
+        width: 170px;
+    }
+    .apropos-item{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        
+    }
+    .apropos-text{
+        order: 1;
+    }
+    .apropos-text h3{
+        text-align: center;
+    }
+    .apropos-img{
+        order: 2;
+    }
+
+    .contact-center form{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .heading-text p{
+        font-size: 30px;
+    }
+    .footer-logo ul{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+@media screen and (max-width:563px){
+    .avis-item{
+        display: inline;
+    }
 }
